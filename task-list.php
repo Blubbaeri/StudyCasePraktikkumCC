@@ -97,6 +97,7 @@ tr:hover{
     <th>Kelas</th>
     <th>Mata Kuliah</th>
     <th>Status</th>
+    <th>Detail</th>
 </tr>
 
 <?php while($row = mysqli_fetch_assoc($data)) { ?>
@@ -111,6 +112,11 @@ tr:hover{
         <span class="badge">
             <?= $row['status']; ?>
         </span>
+    </td>
+    <td>
+        <a href="task-detail.php?id=<?= $row['id']; ?>">
+            Detail
+        </a>
     </td>
 </tr>
 
